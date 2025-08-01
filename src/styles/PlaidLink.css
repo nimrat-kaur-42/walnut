@@ -1,0 +1,148 @@
+.plaid-link-container {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.plaid-info h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.plaid-info p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.sandbox-notice {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.sandbox-notice h4 {
+  margin: 0 0 10px 0;
+  color: #856404;
+  font-size: 1.1rem;
+}
+
+.sandbox-notice p {
+  margin: 0 0 10px 0;
+  color: #856404;
+  font-size: 0.9rem;
+}
+
+.sandbox-notice ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #856404;
+}
+
+.sandbox-notice li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.connect-bank-btn {
+  width: 100%;
+  padding: 15px 24px;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.connect-bank-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+}
+
+.connect-bank-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.plaid-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #8B4513;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.plaid-error {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #721c24;
+}
+
+.plaid-error button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.plaid-error button:hover {
+  background: #c82333;
+}
+
+.connecting-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: white;
+}
+
+.connecting-overlay .loading-spinner {
+  border-top-color: white;
+  margin-bottom: 15px;
+}
+
+.connecting-overlay p {
+  margin: 0;
+  font-size: 1.1rem;
+} 
