@@ -1,0 +1,240 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(135deg, #8B4513 0%, #A0522D 30%, #CD853F 60%, #DEB887 100%),
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath d='M40 15c13.807 0 25 11.193 25 25s-11.193 25-25 25-25-11.193-25-25 11.193-25 25-25zm0 3c-12.15 0-22 9.85-22 22s9.85 22 22 22 22-9.85 22-22-9.85-22-22-22z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(255,255,255,0.1) 0%, transparent 40%);
+  pointer-events: none;
+  animation: float 15s ease-in-out infinite;
+}
+
+.login-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.15) 0%, transparent 40%),
+    radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+  pointer-events: none;
+  animation: float 20s ease-in-out infinite reverse;
+}
+
+/* Horizontal lines */
+.login-container .horizontal-line-1 {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 80px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  animation: slide 6s linear infinite;
+}
+
+.login-container .horizontal-line-2 {
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  animation: slide 8s linear infinite reverse;
+}
+
+.login-container .horizontal-line-3 {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  width: 100px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: slide 10s linear infinite;
+}
+
+.login-container .sliding-light {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -50px;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: slide 8s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  25% { 
+    transform: translateY(-15px) translateX(10px) scale(1.05);
+  }
+  50% { 
+    transform: translateY(10px) translateX(-5px) scale(0.95);
+  }
+  75% { 
+    transform: translateY(-5px) translateX(15px) scale(1.02);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slide {
+  0% { 
+    transform: translateX(-100%);
+  }
+  100% { 
+    transform: translateX(100%);
+  }
+}
+
+.login-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo-section {
+  margin-bottom: 30px;
+}
+
+.walnut-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #8B4513;
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+}
+
+.app-tagline {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.login-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e1e1;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #8B4513;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+}
+
+.toggle-section {
+  margin-bottom: 20px;
+}
+
+.toggle-section p {
+  color: #666;
+  margin: 0;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #8B4513;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.toggle-btn:hover {
+  color: #A0522D;
+}
+
+.demo-section {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #8B4513;
+}
+
+.demo-text {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+} 
