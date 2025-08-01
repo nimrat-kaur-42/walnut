@@ -31,6 +31,11 @@ function App() {
     setCurrentSavings((prev) => prev + roundUpAmount);
   };
 
+  // Add potential roundups from demo transactions
+  const addDemoRoundups = (amount) => {
+    setCurrentSavings((prev) => prev + amount);
+  };
+
   // Calculate progress percentage
   const getProgressPercentage = () => {
     return Math.min((currentSavings / savingsGoal) * 100, 100);
@@ -56,6 +61,7 @@ function App() {
       setSavingsGoal={setSavingsGoal}
       transactions={transactions}
       addTransaction={addTransaction}
+      addDemoRoundups={addDemoRoundups}
       getProgressPercentage={getProgressPercentage}
       onLogout={() => setIsLoggedIn(false)}
     />

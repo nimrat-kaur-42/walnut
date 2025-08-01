@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Footer from "./Footer";
 import "../styles/Login.css";
 
 const Login = ({ onLogin, setUser }) => {
@@ -25,7 +26,7 @@ const Login = ({ onLogin, setUser }) => {
         <div className="logo-section">
           <img src="/walnut.svg" alt="Walnut" className="walnut-logo" />
           <h1 className="app-title">WALNUT</h1>
-          <p className="app-tagline">Turn spare change into smart savings</p>
+          <p className="app-tagline">Tip your Future, Meet your Fix.</p>
         </div>
 
         <form onSubmit={handleSubmit} className="login-form">
@@ -71,9 +72,12 @@ const Login = ({ onLogin, setUser }) => {
         </div>
 
         <div className="demo-section">
-          <p className="demo-text">Try the demo with any email/password!</p>
+          <p className="demo-text">Welcome to the Walnut Team! 🌰✨</p>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

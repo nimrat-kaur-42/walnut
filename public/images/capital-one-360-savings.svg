@@ -1,0 +1,36 @@
+<svg width="300" height="180" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="savingsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Card Background -->
+  <rect width="300" height="180" rx="15" ry="15" fill="url(#savingsGradient)"/>
+  
+  <!-- Capital One Logo -->
+  <text x="20" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Capital One</text>
+  
+  <!-- Card Number -->
+  <text x="20" y="100" font-family="Courier New, monospace" font-size="18" font-weight="600" fill="white" letter-spacing="3">**** **** **** 5678</text>
+  
+  <!-- Card Type -->
+  <text x="20" y="130" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="white" opacity="0.9">STUDENT</text>
+  <text x="20" y="150" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="white" opacity="0.8">Capital One</text>
+  
+  <!-- Balance -->
+  <text x="250" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="end">$3,500.00</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="250" cy="30" r="8" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="270" cy="50" r="5" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="280" cy="80" r="3" fill="rgba(255,255,255,0.15)"/>
+</svg> 

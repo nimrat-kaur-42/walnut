@@ -1,6 +1,14 @@
 # Walnut - Investment App with Plaid Integration
 
-A modern investment app that helps users save money through round-up transactions, now enhanced with Plaid API integration for real bank account connectivity.
+**Budget Breaker? Meet Your Fix.**
+
+Walnut is the revolutionary app for college students that makes saving automatic, even with irregular income. Uniquely, we harness your daily spending habits – not just your unpredictable incoming funds – giving you the flexibility you need to truly take control.
+
+For ultimate discipline, Walnut directly re-routes your overspend into your financial goals. Plus, invest your discount wins and effortlessly round up every purchase. No more excuses.
+
+Built for Capital One Tech Summit 2025.
+
+**Innovatively presented by the Walnut Team**
 
 ## Features
 

@@ -122,6 +122,30 @@
   background: #c82333;
 }
 
+.demo-mode-notice {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.demo-mode-notice p {
+  margin: 0 0 10px 0;
+  color: #856404;
+}
+
+.demo-mode-notice ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #856404;
+}
+
+.demo-mode-notice li {
+  margin-bottom: 5px;
+}
+
 .connecting-overlay {
   position: fixed;
   top: 0;
