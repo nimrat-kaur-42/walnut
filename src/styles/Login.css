@@ -1,6 +1,7 @@
 .login-container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: 
@@ -10,6 +11,7 @@
   padding: 20px;
   position: relative;
   overflow: hidden;
+  gap: 40px;
 }
 
 .login-container::before {
@@ -135,6 +137,10 @@
 .walnut-logo {
   width: 80px;
   height: 80px;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   margin-bottom: 15px;
 }
 

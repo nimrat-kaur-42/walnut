@@ -12,11 +12,21 @@ const PlaidLink = ({ onSuccess, onExit, userId }) => {
     const initializePlaid = async () => {
       try {
         setLoading(true);
+        console.log("Initializing Plaid with userId:", userId || "test_user");
         const token = await plaidService.createLinkToken(userId || "test_user");
+        console.log("Link token received:", token ? "Success" : "Failed");
         setLinkToken(token);
       } catch (err) {
-        setError("Failed to initialize Plaid. Please try again.");
         console.error("Plaid initialization error:", err);
+        if (err.response?.status === 500) {
+          setError("Backend server error. Please check server configuration.");
+        } else if (err.code === "ECONNREFUSED") {
+          setError(
+            "Cannot connect to server. Please ensure backend is running."
+          );
+        } else {
+          setError("Failed to initialize Plaid. Please try again.");
+        }
       } finally {
         setLoading(false);
       }
@@ -77,6 +87,23 @@ const PlaidLink = ({ onSuccess, onExit, userId }) => {
       <div className="plaid-error">
         <p>{error}</p>
         <button onClick={() => window.location.reload()}>Retry</button>
+        <div className="demo-mode-notice">
+          <p>
+            <strong>Demo Mode:</strong> For hackathon purposes, you can use the
+            sandbox credentials:
+          </p>
+          <ul>
+            <li>
+              <strong>Username:</strong> user_good
+            </li>
+            <li>
+              <strong>Password:</strong> pass_good
+            </li>
+            <li>
+              <strong>Bank:</strong> Chase Bank
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }
